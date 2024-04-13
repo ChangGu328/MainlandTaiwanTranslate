@@ -6,8 +6,8 @@ import requests
 words_diff_dict = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
                    34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
 # 两岸学术差异
-# 6-37
-learning_dict = [39, 40, 41, 42]
+learning_dict = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
+                 33, 34, 35, 36, 37, 39, 40, 41, 42]
 
 word_url = "https://bs.chinese-linguipedia.org/api/web/diff/search?category={}&page={}&word=&type="
 learning_url = "https://bs.chinese-linguipedia.org/api/web/academic/search?category={}&page={}&word="
@@ -100,8 +100,8 @@ def search_words():
 
 
 if __name__ == '__main__':
-    # print("开始查询：", "两岸用词差异")
-    # search_words()
-    # print()
+    print("开始查询：", "两岸用词差异")
+    search_words()
+    print()
     print("开始查询：", "两岸学术用词差异")
     search_learning()
