@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>大陆台湾翻译器</title>
+</head>
+<body>
+
+<form method="post">
+  <div style="display: flex;">
+    <div style="flex: 1; padding-right: 10px;">
+      <textarea name="input_text" id="input-text" rows="10" style="width: 100%;"></textarea>
+    </div>
+    <div style="flex-direction: column; padding: 10px;">
+      <input type="submit" name="action" value="大陆化">
+      <input type="submit" name="action" value="台湾化">
+    </div>
+    <div style="flex: 2;">
+      <textarea id="output-text" rows="10" style="width: 100%;" readonly>{{ output_text }}</textarea>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
