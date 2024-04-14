@@ -75,7 +75,15 @@ def search_words():
                 break
             current_page += 1
             target_url = word_url.format(id, current_page)
-            res = requests.get(url=target_url)
+            res = ""
+            try_count = 0
+            while try_count < 3:
+                try:
+                    res = requests.get(url=target_url, verify=False, timeout=10)
+                except:
+                    print("遇到异常，重试中。。。")
+                    time.sleep(2)
+                try_count += 1
             res_json = res.json()
             data = res_json["data"]
             last_page = data["last_page"]
