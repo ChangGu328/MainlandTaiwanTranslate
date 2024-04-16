@@ -11,5 +11,5 @@ def main():
     if request.method == 'POST':
         input_text = request.form['input_text']
         action = request.form['action']
-        output_text = translate.query(input_text, 'Mainland' if action == '大陆化' else 'Taiwan')
+        output_text = translate.translate(input_text, 'Mainland' if action == '大陆化' else 'Taiwan')
     return render_template("translate.html", output_text=output_text)
